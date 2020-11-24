@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is Haskell fast\?
+title: Is Haskell fast?
 ---
 If you try to research this question, you might come up with confusing and contradictory answers, strongly-stated opinions, and loads of technical jargon.
 
