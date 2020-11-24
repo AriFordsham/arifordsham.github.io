@@ -30,9 +30,9 @@ But there is another way. With a strong understanding of the GHC execution model
 
 A full rundown is beyond the scope of this post, but I'll link to some resources:
 
-- Writing Haskell as fast as C: ... (Written in 2008)
+- [Write Haskell as fast as C: exploiting strictness, laziness and recursion](https://donsbot.wordpress.com/2008/05/06/write-haskell-as-fast-as-c-exploiting-strictness-laziness-and-recursion/) (Written in 2008)
 
-- All about stricness analysis (How to take advantage of the latest compiler optimizations)
+- [All About Stricness Analysis](http://fixpt.de/blog/2017-12-04-strictness-analysis-part-1.html) (How to take advantage of the latest compiler optimizations)
 
 ## Watch out for the Haskell performance traps
 
@@ -42,13 +42,13 @@ This is due to a controversial design decision called *laziness*, compounded by,
 
 I won't go into all the details here, but in short, never use `foldl` (use `foldl'` instead), know how to use bang patterns, and read this article by Michael Snoyman:
 
-- All about strictness
+- [All about strictness](https://www.fpcomplete.com/blog/2017/09/all-about-strictness/)
 
 ## Abstaction doesn't have to cost; it can even pay
 
 People seem to think there is inevitably a price to pay for writing high-level code. In fact the opposite is true. Theoretically speaking, high-level code is easier to optimize than low-level code. It simply provides more information to the compiler about the programmer's intent.
 
-As an illustration, let's take the case of Rust. Rust is widely regarded as faster than C and C++, despite being somewhat higher level. Mozilla is in the process of rewriting the engine of Firefox from C++ to Rust, and is already seeing performance gains. In spite of this, if you look through the Rust issues on Github, you'll see many instances of the 'slow' tag, suggesting unexploited optimization opportunities. This suggests Rust is set to get faster yet.
+As an illustration, let's take the case of Rust. Rust is considered on par with C and C++ in terms of performance, despite being somewhat higher level. In spite of this, if you look through the [Rust issues on Github](https://github.com/rust-lang/rust/labels/I-slow), you'll see many instances of the 'I-slow' tag, suggesting unexploited optimization opportunities. This suggests Rust is set to get faster yet.
 
 How can this be? Surely everyone knows nothing beats hand-written C code?
 
