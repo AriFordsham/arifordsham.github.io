@@ -4,7 +4,7 @@ title: Is Haskell fast?
 ---
 If you try to research this question, you might come up with confusing and contradictory answers, strongly-stated opinions, and loads of technical jargon.
 
-The answer depends which perspective the questioner is coming from, and what assumtions, expectations and preconceived notions they bring with them.
+The answer depends which perspective the questioner is coming from, and what assumptions, expectations and preconceived notions they bring with them.
 
 ## Correctly written Haskell is fast for a high-level language
 
