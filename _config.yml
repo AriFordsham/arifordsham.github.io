@@ -23,9 +23,9 @@ footer-links:
   flickr:
   github:
   instagram:
-  linkedin: ari-fordsham
+  linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: yes
   twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
