@@ -62,7 +62,7 @@ Why is this?
 
 - Even the most experienced C programmer must keep objectives other than sheer speed in mind while writing his code. The program must be able to be evaluated for correctness without losing his train of thought, and it must be extendable and maintainable, often by other people. In the source code, these are unavoidable trade-offs.
 
-- Because of this, even programmers steeped in C performance technique must program defensively to ensure program correctness. A compiler can perform aggressive optimization that will make a programmer's jaw drop, simply because it can keep track of far more program state at a time in order to gaurantee correctness. The compiler can then often build optimizations on other optimizations.Imagine trying to aggrssively inline a program by hand.
+- Because of this, even programmers steeped in C performance technique must program defensively to ensure program correctness. A compiler can perform aggressive optimization that will make a programmer's jaw drop, simply because it can keep track of far more program state at a time in order to gaurantee correctness. The compiler can then often build optimizations on other optimizations. Imagine trying to aggressively inline a program by hand.
 
 ## Summary
 
