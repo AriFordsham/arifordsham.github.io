@@ -32,19 +32,19 @@ A full rundown is beyond the scope of this post, but I'll link to some resources
 
 - [Write Haskell as fast as C: exploiting strictness, laziness and recursion](https://donsbot.wordpress.com/2008/05/06/write-haskell-as-fast-as-c-exploiting-strictness-laziness-and-recursion/) (Written in 2008)
 
-- [All About Stricness Analysis](http://fixpt.de/blog/2017-12-04-strictness-analysis-part-1.html) (How to take advantage of the latest compiler optimizations)
+- [All About Strictness Analysis](http://fixpt.de/blog/2017-12-04-strictness-analysis-part-1.html) (How to take advantage of the latest compiler optimizations)
 
 ## Watch out for the Haskell performance traps
 
 There are, however, some things that every production Haskell developer needs to be aware of. There is Haskell code that looks correct, but will run *way* slower, and use far more memory, than the worst you will come across in an interpreted language. The slowdown can run to several factors, with programs occasionally running out of stack space before they can get anything done!
 
-This is due to a controversial design decision called *laziness*, compounded by, in hindsight, subptimal library design and idiom choice, and needs to be understood in order to be able to gaurantee consistent reasonable performance from your Haskell code.
+This is due to a controversial design decision called *laziness*, compounded by, in hindsight, suboptimal library design and idiom choice, and needs to be understood in order to be able to guarantee consistent reasonable performance from your Haskell code.
 
 I won't go into all the details here, but in short, never use `foldl` (use `foldl'` instead), know how to use bang patterns, and read this article by Michael Snoyman:
 
 - [All about strictness](https://www.fpcomplete.com/blog/2017/09/all-about-strictness/)
 
-## Abstaction doesn't have to cost; it can even pay
+## Abstraction doesn't have to cost; it can even pay
 
 People seem to think there is inevitably a price to pay for writing high-level code. In fact the opposite is true. Theoretically speaking, high-level code is easier to optimize than low-level code. It simply provides more information to the compiler about the programmer's intent.
 
