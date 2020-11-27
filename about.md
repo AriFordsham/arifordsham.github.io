@@ -6,9 +6,7 @@ permalink: /about/
 
 *"My knowledge is a collection of things I am able to learn, which happen to have already been useful to me in the past."*
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Knowledge is not accrued by itself - Knowledge serves as a showcase of an individual's *ability to learn.* Chances are, if someone already knows subjects well, they will be able to learn any subject they put their mind to.
 
 ### Contact me
 
