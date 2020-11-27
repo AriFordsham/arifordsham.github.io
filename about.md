@@ -12,6 +12,6 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-(LinkedIn)[https://www.linkedin.com/in/ari-fordsham/]
+[LinkedIn](https://www.linkedin.com/in/ari-fordsham/)
 
 <arifordsham@gmail.com>
