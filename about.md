@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-*"My knowledge is a colection of things I am able to learn, which happen to have already been useful to me in the past."
+*"My knowledge is a colection of things I am able to learn, which happen to have already been useful to me in the past."*
 
 ### More Information
 
