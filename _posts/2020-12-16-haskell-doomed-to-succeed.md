@@ -26,7 +26,7 @@ A wide user base, using Haskell in important projects, poses a responsibility to
 
 They certainly seem to have been successful: GHC is widely considered a robust and reliable compiler, and the GHC developers take the quality of their product very seriously, despite their very limited resources.
 
-So while SPJ claims to have been saying "don't divert *too* much effort from the main goals to make the platform appealing to production users," It definitely has been understood in practice to mean "Let's try not to draw attention to ourselves, because too many users will prevent us doing what we want to do."
+So while SPJ claims to have been saying "don't allow efforts to make the platform appealing to production users take away from Haskell's key principles," It definitely has been understood in practice to mean "Let's try not to draw attention to ourselves, because too many users will prevent us doing what we want to do."
 
 Until now.
 
@@ -39,3 +39,9 @@ Haskell's advantages - a strong mathematical basis, facilities for abstraction a
 This shift in the makeup of the Haskell community certainly has led to a shift in focus. At the Haskell eXchange conference in November 2020, SPJ [announced](https://youtu.be/MEmRarBL9kw) the [Haskell Foundation](https://haskell.foundation/), explicitly "dedicated to broadening the adoption of Haskell" as well as "supporting its ecosystem of tools, libraries, education, and research."
 
 So while the original architects of Haskell may find this unintended success unwanted, it is certainly a vindication of their vision: remaining faithful to strong mathematical principles and resisting calls for premature pragmatism can transform the things we do.
+
+### UPDATE
+
+Simon Peyton-Jones has graciously commented on this post - you can read his remarks [here](https://discourse.haskell.org/t/new-blog-post-haskell-doomed-to-succeed/1662/2).
+
+In short, he reiterates that wide production adoption was never an anti-goal of Haskell, but rather "making fundamental compromises of core principles [of Haskell] in pursuit of short-term production goals."
