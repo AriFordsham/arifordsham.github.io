@@ -4,7 +4,7 @@ title: Haskell - Doomed to Succeed?
 ---
 The unofficial motto of Haskell, the predominant lazy functional language, has long been:
 
-*"Avoid success at all costs."*
+> *"Avoid success at all costs."*
 
 This is attributed to Simon L. Peyton-Jones (SPJ), the main architect of the Haskell language and the GHC compiler, and mentioned in the [slides](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/HaskellRetrospective.ppt) of a [talk](https://www.microsoft.com/en-us/research/publication/wearing-hair-shirt-retrospective-haskell-2003/) he gave at the POPL conference in 2003.
 
@@ -32,7 +32,7 @@ Until now.
 
 In his POPL talk, SPJ quotes Anthony Hoare as saying:
 
-*"I fear that Haskell is doomed to succeed.”*
+> *"I fear that Haskell is doomed to succeed.”*
 
 Haskell's advantages - a strong mathematical basis, facilities for abstraction and de-duplication, [excellent performance compared to other high-level languages](https://arifordsham.com/is-haskell-fast/), good correctness guarantees, ease of concurrency, but most of all, *enabling a better way to think about code*, have increasingly lead to its [widespread adoption in production code](https://wiki.haskell.org/Haskell_in_industry). Haskell is contending with success despite itself.
 
