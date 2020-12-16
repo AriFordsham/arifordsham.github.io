@@ -44,4 +44,4 @@ So while the original architects of Haskell may find this unintended success unw
 
 Simon Peyton-Jones has graciously commented on this post - you can read his remarks [here](https://discourse.haskell.org/t/new-blog-post-haskell-doomed-to-succeed/1662/2).
 
-In short, he reiterates that wide production adoption was never an anti-goal of Haskell, but rather "making fundamental compromises of core principles [of Haskell] in pursuit of short-term production goals."
+In short, he reiterates that wide production adoption was never an anti-goal of Haskell, but rather not "making fundamental compromises of core principles [of Haskell] in pursuit of short-term production goals."
