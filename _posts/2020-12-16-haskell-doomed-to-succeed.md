@@ -1,4 +1,5 @@
-﻿---
+---
+layout: post
 title: Haskell - Doomed to Succeed?
 ---
 The unofficial motto of Haskell, the predominant lazy functional language, has long been:
