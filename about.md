@@ -35,4 +35,4 @@ My main area of interest is computer science. I regularly read textbooks and aca
 
 [LinkedIn](https://www.linkedin.com/in/ari-fordsham/)
 
-<arifordsham@gmail.com>
+<ari@arifordsham.com>
