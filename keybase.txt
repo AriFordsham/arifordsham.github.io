@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/arifordsham
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://arifordsham.com
+  * I am arifordsham (https://keybase.io/arifordsham) on keybase.
+  * I have a public key ASDbWHr953mxsn6t5zKLYAYk1VWPI2AqHo4vJGH5GNTp5wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120db587afde779b1b27eade7328b600624d5558f23602a1e8e2f2461f918d4e9e70a",
+      "host": "keybase.io",
+      "kid": "0120db587afde779b1b27eade7328b600624d5558f23602a1e8e2f2461f918d4e9e70a",
+      "uid": "2994fa97c48e34d3bcf66d4d25488219",
+      "username": "arifordsham"
+    },
+    "merkle_root": {
+      "ctime": 1620831934,
+      "hash": "7fcb11ca091fa5a3fd3a0ecc027fe030bd702cc671a6e825d52a8008e8bd12caf8df0e50c2a626bfb78f31ba7d79b58fdd060e71b85251149958b8968ced3c2c",
+      "hash_meta": "da6b84acaec57dee2b0739f180c367ed875357cac99ea379013768c55509dbef",
+      "seqno": 19920434
+    },
+    "service": {
+      "entropy": "J5+LjTWlCWOyzqqsGwjJuukP",
+      "hostname": "arifordsham.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1620831987,
+  "expire_in": 504576000,
+  "prev": "3c72a2681328f3ee9f27e56835c7d93bf0ad0eb306cc1247ebb8679d989553d7",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg21h6/ed5sbJ+recyi2AGJNVVjyNgKh6OLyRh+RjU6ecKp3BheWxvYWTESpcCB8QgPHKiaBMo8+6fJ+VoNcfZO/CtDrMGzBJH67hnnZiVU9fEIDd0ItXARn0eWFrVSO3wtZq+2ST03Ggvdkqd0pk4/4MpAgHCo3NpZ8RAPnMEB1WgjEPUJNL/xXONSgskmuJZQanCm8A03Rhcmi3fp/klER4mhnLttF8idqs9DrM56WC/5TuvksisqGAcDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIM8RWbns5v7sXOM1aUsXFUZfiCbmE3Lvls8/eOGu0dVFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/arifordsham
+
+==================================================================
