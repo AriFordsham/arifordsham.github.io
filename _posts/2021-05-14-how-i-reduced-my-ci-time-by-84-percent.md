@@ -1,4 +1,4 @@
---
+---
 layout: post
 title: How I reduced my Haskell CI time by 84%
 ---
