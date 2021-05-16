@@ -23,7 +23,7 @@ stack build --test --coverage --haddock $@
 
 My project is hosted on Gitlab, so I wanted to get GitLab's excellent CI to run and validate this script on every push.
 
-Initial setup was dead straightforward (once I knew how!): I created a `.gitlab-ci.yml` file in the root of my project as follows:
+Initial setup was dead straightforward (once I knew how!): I created a `.github-ci.yml` file in the root of my project as follows:
 ```yaml
 image: migamake/stack-build-image:17.0
 
@@ -98,7 +98,5 @@ Since I initially set up CI, my project has grown and added dependencies. So I r
 A regular run now takes just under eight minutes, but without the cache, it takes almost 50 minutes, or an 84% reduction in run time.
 
 CI looks daunting, but it simple enough once you invest the time to learn how to do what you want, andif you do it right (and don't overcomplicate!) you can significantly improve and smooth your workflow.
-
-*A Shout-out to Naftoli Gugenheim for showing me how to do most of this stuff.*
 
 [^2]: The key field is required: it allows you to use different caches for different scenarios, such as branches, by setting the key to an environment variable. I trust stack to always use the right library versions from the `package.yaml`, and so the more sharing the better. Therefore I just use an arbitrary contant string so all scenarios share a single cache.
