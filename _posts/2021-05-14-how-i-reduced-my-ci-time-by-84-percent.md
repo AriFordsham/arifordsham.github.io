@@ -54,7 +54,7 @@ Here comes the issue: after writing that script, ever CI run took in excess of 3
 
 That's just unnecessary duplication of work - the dependencies don't change between runs. On my local machine, stack keeps a cache of already-built libraries, so rebuilds are near-instant. However, to ensure reproducibility, all Docker runs start with a clean slate (besides whatever is in the container itself,) so this cache is not kept.
 
-Gitlab's caching feature comes to the rescue. You can tell Gitlab that changes to certain directories won't affect the build correctness of your project, so Gitlab will go ahead and preserve those between runs. I added the following to my `.github-ci.yml`:
+Gitlab's caching feature comes to the rescue. You can tell Gitlab that changes to certain directories won't affect the build correctness of your project, so Gitlab will go ahead and preserve those between runs. I added the following to my `.gitlab-ci.yml`:
 ```yaml
 cache:
   key: "ALL"
