@@ -23,7 +23,7 @@ stack build --test --coverage --haddock $@
 
 My project is hosted on Gitlab, so I wanted to get GitLab's excellent CI to run and validate this script on every push.
 
-Initial setup was dead straightforward (once I knew how!): I created a `.github-ci.yml` file in the root of my project as follows:
+Initial setup was dead straightforward (once I knew how!): I created a `.gitlab-ci.yml` file in the root of my project as follows:
 ```yaml
 image: migamake/stack-build-image:17.0
 
