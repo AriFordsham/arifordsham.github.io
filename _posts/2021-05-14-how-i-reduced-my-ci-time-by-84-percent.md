@@ -9,7 +9,7 @@ In this post, I will speak about how I implemented Gitlab Continuous integration
 
 I use Michael Snoyman's excellent [stack](https://docs.haskellstack.org/en/stable/README/) build tool for my Haskell projects. Amongst many features that generally improve my quality of life as a developer, stack tries to guarantee *reproducible builds* - controlling as many variables as possible, to ensure build behaviour is the same - reproducible - between builds, even if I change the configuration of my machine, or even move the project to a different machine.
 
-To achieve this, stack downloads all project dependencies innto the project directory. But it goes further - it downloads a fixed version of GHC, the Haskell compiler, and stashes it away in a special location. This ensures every version uses a specific version of the build toolchain, and updating my system GHC install  will never break a project due to a subtle change in compiler behaviour, for example.
+To achieve this, stack downloads all project dependencies into the project directory. But it goes further - it downloads a fixed version of GHC, the Haskell compiler, and stashes it away in a special location. This ensures every version uses a specific version of the build toolchain, and updating my system GHC install  will never break a project due to a subtle change in compiler behaviour, for example.
 
 I have a shell script I use that defines what I consider a full working build for my project, stored at `ci/build.sh`:
 ```haskell
@@ -34,7 +34,7 @@ stack:
 - Define which Docker image to use. I'm using [stack-build-image](https://hub.docker.com/r/migamake/stack-build-image) from [Migamake](https://migamake.com/), which provides stack preinstalled, for [LTS Haskell](https://github.com/commercialhaskell/lts-haskell#lts-haskell-version-your-ecosystem) version 17.
 - Define the `stack` job, which runs the script `ci/build.sh`.
 
-Job done! On every push, Gitlab runs the build script in a Docker container. Since `stack` returns an error code if any test suite fails, I get a big red cross next to my commit on GitLab if my project fails to build or run correctly..
+Job done! On every push, Gitlab runs the build script in a Docker container. Since `stack` returns an error code if any test suite fails, I get a big red cross next to my commit on GitLab if my project fails to build or run correctly.
 
 Here comes the issue: after writing that script, ever CI run took in excess of 33 minutes. Not that this is really a problem in any way: My CI script also runs in a pre-commit hook[^1] (which runs in under a minute on my development machine), so I never push without knowing CI passes. It's just nice to not have to wait long for that satisfying green tick, and with all those bitcoin miners around, It feels better not to be unneccesarily squandering the planet's resources.
 
@@ -91,7 +91,7 @@ cache:
 
 Success! After generating the cache, run time has dropped from 32 minutes to 7 minutes.
 
-A look at the build log shows that this time is dominated by downloading and uploading the cache zip, so there's no more simple optimization opportunities.
+A look at the build log shows that this time is dominated by downloading and uploading the cache zip. Even adding `--fast` to `ci/build.sh`, which tells stack to do unoptimized builds, made negligble difference, so I concluded there's no more simple optimization opportunities.
 
 Since I initially set up CI, my project has grown and added dependencies. So I ran the latest version, with and without the cache enabled.
 
