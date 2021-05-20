@@ -50,7 +50,7 @@ Here comes the issue: after writing that script, ever CI run took in excess of 3
     
     This will now run before every commit. As with CI, an error code from the script will cause the commit to fail. You can override this with `git commit --force`.
     
-    A quick look at the build log shows the problem. As mentioned, stack downloads the GHC compiler and all dependencies. Since Docker does not store any state between runs, the build system has loads of downloading and compiling to do before it can even start building and testing the project itself.
+A quick look at the build log shows the problem. As mentioned, stack downloads the GHC compiler and all dependencies. Since Docker does not store any state between runs, the build system has loads of downloading and compiling to do before it can even start building and testing the project itself.
 
 That's just unnecessary duplication of work - the dependencies don't change between runs. On my local machine, stack keeps a cache of already-built libraries, so rebuilds are near-instant. However, to ensure reproducibility, all Docker runs start with a clean slate (besides whatever is in the container itself,) so this cache is not kept.
 
