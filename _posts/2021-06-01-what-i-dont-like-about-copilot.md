@@ -25,7 +25,7 @@ Copilot's breakthrough party trick is the ability to analyze natural language in
 
 Of course, on the flip side, Copilot might encourage developers to write comments, which is a good thing. Then again, they probably won't delete or trim the comments after they write(?) the code, and therefore the comments will repeat what the code says, which is bad[^3].
 
-{^3]: See [Chapter 1 of The Practice of Programming](https://learning.oreilly.com/library/view/the-practice-of/9780133133448/ch01.html#ch01lev1sec6) for why.
+[^3]: See [Chapter 1 of The Practice of Programming](https://learning.oreilly.com/library/view/the-practice-of/9780133133448/ch01.html#ch01lev1sec6) for why.
 
 Can we use AI to find abstractions? Very possibly, and that would be amazing. but it will be a lot harder than merely analyzing and parroting code, and no one the size of Microsoft/Github is even trying.
 
