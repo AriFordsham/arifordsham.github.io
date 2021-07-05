@@ -64,7 +64,7 @@ Now there's an additional complication: While Docker containers provide a home d
 
 My final `.gitlab-ci.yml` looks like this:
 
-<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.gitlab-ci.yaml"></script>
+<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.gitlab-ci.yml"></script>
 
 Success! After generating the cache, run time has dropped from 32 minutes to 7 minutes.
 
