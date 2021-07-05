@@ -11,7 +11,7 @@ I use Michael Snoyman's excellent [stack](https://docs.haskellstack.org/en/stabl
 
 To achieve this, stack downloads all project dependencies into the project directory. But it goes further - it downloads a fixed version of GHC, the Haskell compiler, and stashes it away in a special location. This ensures every version uses a specific version of the build toolchain, and updating my system GHC install  will never break a project due to a subtle change in compiler behaviour, for example.
 
-I have a shell script I use that defines what I consider a full working build for my project, stored at `ci/build.sh
+I have a shell script I use that defines what I consider a full working build for my project, stored at `ci/build.sh`:
 
 <script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=ci-build.sh"></script>
 
@@ -24,13 +24,9 @@ I have a shell script I use that defines what I consider a full working build fo
 My project is hosted on Gitlab, so I wanted to get GitLab's excellent CI to run and validate this script on every push.
 
 Initial setup was dead straightforward (once I knew how!): I created a `.gitlab-ci.yml` file in the root of my project as follows:
-```yaml
-image: migamake/stack-build-image:17.0
 
-stack:
-  script:
-    - ci/build.sh
-```
+<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.gitlab-ci-initial.yml"></script>
+
 - Define which Docker image to use. I'm using [stack-build-image](https://hub.docker.com/r/migamake/stack-build-image) from [Migamake](https://migamake.com/), which provides stack preinstalled, for [LTS Haskell](https://github.com/commercialhaskell/lts-haskell#lts-haskell-version-your-ecosystem) version 17.
 - Define the `stack` job, which runs the script `ci/build.sh`.
 
@@ -42,11 +38,9 @@ Here comes the issue: after writing that script, ever CI run took in excess of 3
 
     Your git repo has a hidden directory, `.git`, where git stores it's bookkeeping. Under that directory is a directory called `hooks` (By default, it contains a set of `.sample` files showing what hooks are available). I created a file there called `pre-commit`:
     
-    ```sh
-    sh ci/build.sh
-    ```
+    <script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.git-hooks-pre-commit"></script>
     
-    On Linux, you'll generally need to set this as executable by running `chmod a+x .git/hooks/pre-commit`.
+    On Linux, you'll generally need to set this as executable by running `chmod +x .git/hooks/pre-commit`.
     
     This will now run before every commit. As with CI, an error code from the script will cause the commit to fail. You can override this with `git commit --force`.
     
@@ -55,12 +49,9 @@ A quick look at the build log shows the problem. As mentioned, stack downloads t
 That's just unnecessary duplication of work - the dependencies don't change between runs. On my local machine, stack keeps a cache of already-built libraries, so rebuilds are near-instant. However, to ensure reproducibility, all Docker runs start with a clean slate (besides whatever is in the container itself,) so this cache is not kept.
 
 Gitlab's caching feature comes to the rescue. You can tell Gitlab that changes to certain directories won't affect the build correctness of your project, so Gitlab will go ahead and preserve those between runs. I added the following to my `.gitlab-ci.yml`:
-```yaml
-cache:
-  key: "ALL"
-  paths:
-    - .stack-work/
-```
+
+<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.gitlab-ci-cache.yml"></script>
+
 This sets up Gitlab's cache for the `.stack-work/` directory, where stack keeps library dependencies[^2]. Now, at the end of every run, Gitlab zips up the `.stack-work` directory, and uploads it to a cloud bucket. Then, next time, before it begins running your CI scripts, it downloads and unzips it into your project directory.
 
 This should allow stack to now find its cache from last time, and should enable zippy-fast builds, like I get on my local machine.
@@ -72,22 +63,8 @@ stack caches project-specific artifacts in `.stack-work`, under the project dire
 Now there's an additional complication: While Docker containers provide a home directory for projects to use, Gitlab cache only works for directories under the project directory. So I also need to set the `$STACK-ROOT` environment variable, to tell stack to store its build chain where the cache can see it.
 
 My final `.gitlab-ci.yml` looks like this:
-```yaml
-image: migamake/stack-build-image:17.0
 
-stack:
-  script:
-    - ci/build.sh
-
-variables:
-  STACK_ROOT: "$CI_PROJECT_DIR/.stack"
-
-cache:
-  key: "ALL"
-  paths:
-    - .stack-work/
-    - .stack/
-```
+<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=.gitlab-ci.yaml"></script>
 
 Success! After generating the cache, run time has dropped from 32 minutes to 7 minutes.
 
