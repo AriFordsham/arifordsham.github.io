@@ -11,10 +11,10 @@ I use Michael Snoyman's excellent [stack](https://docs.haskellstack.org/en/stabl
 
 To achieve this, stack downloads all project dependencies into the project directory. But it goes further - it downloads a fixed version of GHC, the Haskell compiler, and stashes it away in a special location. This ensures every version uses a specific version of the build toolchain, and updating my system GHC install  will never break a project due to a subtle change in compiler behaviour, for example.
 
-I have a shell script I use that defines what I consider a full working build for my project, stored at `ci/build.sh`:
-```haskell
-stack build --test --coverage --haddock $@
-```
+I have a shell script I use that defines what I consider a full working build for my project, stored at `ci/build.sh
+
+<script src="https://gist.github.com/AriFordsham/54862f3eea9314af29da0e12d9331648.js?file=ci-build.sh"></script>
+
 - Run the stack build command to build the project (based on the poject's `package.yaml` file.)
 - Run all test suites
 - Generate a [test coverage](https://wiki.haskell.org/Haskell_program_coverage) report
