@@ -2,8 +2,6 @@
 layout: post
 title: What Can I Refactor For You Today?
 ---
-Hi all,
-
 As developers, we love building things. Haskell gives us great opportunities to channel our creative drives into producing libraries and tools that are (hopefully) both intellectually elegant and functionally useful. But there's more to building software than just creating. 
 
 Unfortunately, software often needs maintenance, or other changes after the initial write. On older projects, library or GHC changes mean code might no longer compile. A project may have been architected without accounting for ways it may need to change in the future, and extending it is now a struggle. In the rush to get something completed, an engineer may be left with an implementation that he cannot be confident is free of bugs, or is simply not satisfyingly tidy or elegant.
