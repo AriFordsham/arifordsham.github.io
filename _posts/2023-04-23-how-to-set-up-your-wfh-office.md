@@ -51,19 +51,19 @@ All in all, my wishlist for a video call setup is:
 
 5. Your picture is a comfortable size and distance from me.
 
-     This is subjective, some people may infact want to conceal this, but I personally prefer
+     This is subjective, some people may in fact want to conceal this, but I personally prefer
   an authentic and transparent approach.
 
-4. There is no curving of the picture
+4. There is no curving distortion of the picture
 
 What people typically get is a low-to-middle quality webcam, often their laptop's
-buil-in one, mounted on top of their screen. This leads to a close-up headshot,
+built-in one, mounted on top of their screen. This leads to a close-up headshot,
 far from ideal. My idea of a better setup follows.
 
-*Disclaimer: I haven't had the space or the equiptment to try everything in this
+*Disclaimer: I haven't had the space or the equipment to try everything in this
 setup, so some of it remains untested and theoretical.*
 
-It would seem that points (2) and (3) are a contradiction, but in fact they are
+It would seem that points (3) and (4) are a contradiction, but in fact they are
 not. The key lies in the "camera angle", often known as "field of view" or "focal length"[^1]. To
 cut through the jargon, when the camera is close by, you can only show a lot of
 foreground by showing a lot of background. In order to get the most context, your
@@ -83,16 +83,16 @@ In fact, if you've ever seen a newsroom, they use cameras set right back from th
 
 The next step then, is choosing a camera. We're looking for a camera with a narrow focal angle.
 Unfortunately, narrow focal-angle webcams are too niche to exist. The next best we
-can do is adjustable focal length - also known as "optical zoom" (digital zoom just crops the image, not changing the focal length), but in needs to go narrower than standard. The webcam market seems to focus on broader angle, getting more context from a traditional closeup mount point - leading to the curved distortion I mentioned earlier.
+can do is adjustable focal length - also known as "optical zoom" (digital zoom just crops the image, not changing the focal length), but it needs to go narrower than standard. The webcam market seems to focus on broader angle, getting more context from a traditional closeup mount point - leading to the curved distortion I mentioned earlier.
 
 There is a [cheap webcam](https://amzn.to/3H7islz) on Amazon with a manually adjustable focal length, but
 I didn't want to take a risk on quality. Luckily, The Logitech Brio models have
 a field of view that adjusts down to 65 degrees, which works very well in practice.
-There are two models available - The [BRIO 500](https://amzn.to/3L2V3mr) with 1080p resolution and the [4K Pro](https://amzn.to/440cIUS) (also known as the BRIO Stream) with 4K and other advanced features. I have the BRIO Stream and am very hapy with it. (Be aware that may videoconferencing platforms limit the streaming resolution, cancelling some of the benefits of a better camera.) Once you have your camera positioned as you like, you change the focal length in the Logitech LogiTune app.
+There are two models available - The [BRIO 500](https://amzn.to/3L2V3mr) with 1080p resolution and the [4K Pro](https://amzn.to/440cIUS) (also known as the BRIO Stream) with 4K and other advanced features. I have the BRIO Stream and am very happy with it. (Be aware that may video-conferencing platforms limit the streaming resolution, canceling some of the benefits of a better camera.) Once you have your camera positioned as you like, you change the focal length in the Logitech LogiTune app.
 
 One thing I'd love to understand better is lighting. As far as I understand so far,
 The right lighting makes a big difference to video quality, and the best place for the lights
-is behind the camera, with as much lighting as possible. Obvioiusly right behind doesn't work,
+is behind the camera, with as much lighting as possible. Obviously right behind doesn't work,
 so probably you need lights up and to the sides. This jives with what I've seen of photo studios.
 
 [^1]: I credit a chapter in Randall Munroe's book "How To" for helping me
